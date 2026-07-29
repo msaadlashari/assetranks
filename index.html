@@ -555,92 +555,7 @@
       background-size: 10px; background-repeat: no-repeat; background-position: center;
     }
 
-    /* ─── COURSES / VIDEOS ─── */
-    #courses { background: var(--surface); }
-
-    .youtube-header {
-      display: flex; align-items: center; gap: 10px;
-      margin-bottom: 40px;
-    }
-
-    .yt-badge {
-      background: #FF0000;
-      color: #fff;
-      font-family: 'Syne', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 4px 12px;
-      border-radius: 4px;
-      letter-spacing: 0.05em;
-    }
-
-    .yt-handle {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .videos-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-
-    .video-card {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: var(--surface-2);
-      border: 0.5px solid var(--border);
-      cursor: pointer;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .video-card:hover { transform: translateY(-4px); border-color: var(--border-bright); }
-
-    .video-thumb {
-      position: relative;
-      aspect-ratio: 16/9;
-      overflow: hidden;
-      background: var(--surface-3);
-    }
-
-    .video-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
-
-    .video-card:hover .video-thumb img { transform: scale(1.04); }
-
-    .video-play {
-      position: absolute; inset: 0;
-      display: flex; align-items: center; justify-content: center;
-      background: rgba(0,0,0,0.35);
-    }
-
-    .video-play-btn {
-      width: 48px; height: 48px;
-      background: rgba(201,168,76,0.9);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s, transform 0.15s;
-    }
-
-    .video-card:hover .video-play-btn { background: var(--gold); transform: scale(1.1); }
-
-    .video-play-btn svg { width: 18px; height: 18px; fill: var(--black); margin-left: 2px; }
-
-    .video-info {
-      padding: 16px;
-    }
-
-    .video-info h4 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--text);
-      line-height: 1.4;
-    }
-
-    .courses-cta {
-      text-align: center;
-      margin-top: 48px;
-    }
-
+    
     /* ─── CONTACT ─── */
     #contact {}
 
@@ -1001,200 +916,7 @@
       transform: translateY(0);
     }
   
-    /* ─── SIGNAL PERFORMANCE ─── */
-    #performance { background: var(--black); }
-
-    .perf-summary {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1px;
-      background: var(--border);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      margin-bottom: 28px;
-    }
-
-    .perf-stat-card {
-      background: var(--surface);
-      padding: 28px 20px;
-      text-align: center;
-      transition: background 0.2s;
-    }
-    .perf-stat-card:hover { background: var(--surface-2); }
-
-    .perf-stat-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 6px;
-    }
-
-    .perf-stat-label {
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-
-    .perf-chart-wrap {
-      background: var(--surface);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 28px 28px 16px;
-      margin-bottom: 24px;
-    }
-
-    .perf-chart-header {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 24px;
-    }
-
-    .perf-bars {
-      display: flex;
-      align-items: flex-end;
-      gap: 8px;
-      height: 120px;
-    }
-
-    .perf-bar-wrap {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      height: 100%;
-      position: relative;
-    }
-
-    .perf-bar {
-      width: 100%;
-      border-radius: 4px 4px 0 0;
-      transition: opacity 0.2s;
-      min-height: 4px;
-      position: relative;
-      cursor: default;
-    }
-
-    .perf-bar:hover::after {
-      content: attr(data-tip);
-      position: absolute;
-      bottom: calc(100% + 6px);
-      left: 50%; transform: translateX(-50%);
-      background: var(--surface-3);
-      border: 0.5px solid var(--border-bright);
-      color: var(--text);
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 8px;
-      border-radius: 4px;
-      white-space: nowrap;
-      z-index: 10;
-    }
-
-    .perf-bar-labels {
-      display: flex;
-      gap: 8px;
-      margin-top: 8px;
-    }
-
-    .perf-bar-label {
-      flex: 1;
-      text-align: center;
-      font-size: 0.68rem;
-      color: var(--text-dim);
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .perf-table-wrap {
-      background: var(--surface);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-
-    .perf-table-header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 24px;
-      border-bottom: 0.5px solid var(--border);
-      flex-wrap: wrap; gap: 12px;
-    }
-
-    .perf-filter-btn {
-      background: var(--surface-2);
-      border: 0.5px solid var(--border);
-      color: var(--text-muted);
-      font-family: 'Syne', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 5px 14px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.2s;
-      letter-spacing: 0.04em;
-    }
-    .perf-filter-btn:hover { border-color: var(--gold); color: var(--gold); }
-    .perf-filter-btn.active { background: rgba(201,168,76,0.12); border-color: var(--gold); color: var(--gold); }
-
-    .perf-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.875rem;
-    }
-
-    .perf-table thead tr {
-      background: var(--surface-2);
-    }
-
-    .perf-table th {
-      padding: 12px 16px;
-      text-align: left;
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      border-bottom: 0.5px solid var(--border);
-      white-space: nowrap;
-    }
-
-    .perf-table td {
-      padding: 13px 16px;
-      border-bottom: 0.5px solid rgba(255,255,255,0.04);
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      font-weight: 300;
-      white-space: nowrap;
-    }
-
-    .perf-table tr:last-child td { border-bottom: none; }
-    .perf-table tr:hover td { background: rgba(255,255,255,0.02); }
-
-    .perf-table td.pair-cell {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .sig-badge {
-      display: inline-flex; align-items: center;
-      font-size: 0.72rem; font-weight: 700;
-      padding: 3px 10px; border-radius: 999px;
-      letter-spacing: 0.05em;
-      font-family: 'Syne', sans-serif;
-    }
-    .sig-buy  { background: rgba(34,197,94,0.1);  color: #22c55e; border: 0.5px solid rgba(34,197,94,0.3); }
-    .sig-sell { background: rgba(239,68,68,0.1);  color: #ef4444; border: 0.5px solid rgba(239,68,68,0.3); }
-    .sig-win  { background: rgba(34,197,94,0.1);  color: #22c55e; border: 0.5px solid rgba(34,197,94,0.3); }
-    .sig-loss { background: rgba(239,68,68,0.1);  color: #ef4444; border: 0.5px solid rgba(239,68,68,0.3); }
-    .sig-open { background: rgba(201,168,76,0.1); color: var(--gold); border: 0.5px solid var(--border-bright); }
-
-    .pip-pos { color: #22c55e; font-weight: 600; font-family: 'Syne', sans-serif; }
-    .pip-neg { color: #ef4444; font-weight: 600; font-family: 'Syne', sans-serif; }
+    
 
     /* ─── WHATSAPP WIDGET ─── */
     @keyframes waPulse {
@@ -1234,8 +956,6 @@
     <li><a href="#why-choose">Why Us</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#live-chart">Live Chart</a></li>
-    <li><a href="#performance">Performance</a></li>
-    <li><a href="#courses">Courses</a></li>
     <li><a href="#faqs">FAQs</a></li>
     <li><a href="#contact" class="nav-cta">Contact Us</a></li>
   </ul>
@@ -1842,80 +1562,6 @@
 
 
 
-<!-- SIGNAL PERFORMANCE -->
-<section id="performance">
-  <div class="section-header centered fade-up">
-    <p class="section-eyebrow">Track Record</p>
-    <h2 class="section-title">Signal Performance</h2>
-    <p class="section-sub">Transparent, verified results from our XAU/USD signals. Updated regularly.</p>
-  </div>
-
-  <!-- Summary Stats -->
-  <div class="perf-summary fade-up">
-    <div class="perf-stat-card">
-      <div class="perf-stat-num" style="color:#22c55e">78%</div>
-      <div class="perf-stat-label">Win Rate</div>
-    </div>
-    <div class="perf-stat-card">
-      <div class="perf-stat-num" style="color:var(--gold)">247</div>
-      <div class="perf-stat-label">Total Signals</div>
-    </div>
-    <div class="perf-stat-card">
-      <div class="perf-stat-num" style="color:#22c55e">+4,820</div>
-      <div class="perf-stat-label">Total Pips</div>
-    </div>
-    <div class="perf-stat-card">
-      <div class="perf-stat-num" style="color:#22c55e">2.4</div>
-      <div class="perf-stat-label">Avg R:R Ratio</div>
-    </div>
-    <div class="perf-stat-card">
-      <div class="perf-stat-num" style="color:#ef4444">22%</div>
-      <div class="perf-stat-label">Loss Rate</div>
-    </div>
-  </div>
-
-  <!-- Monthly Performance Bar Chart -->
-  <div class="perf-chart-wrap fade-up">
-    <div class="perf-chart-header">
-      <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;color:var(--text)">Monthly Pips</span>
-      <span style="font-size:0.75rem;color:var(--text-muted)">2025 – XAU/USD Only</span>
-    </div>
-    <div class="perf-bars" id="perfBars"></div>
-    <div class="perf-bar-labels" id="perfLabels"></div>
-  </div>
-
-  <!-- Signal Log Table -->
-  <div class="perf-table-wrap fade-up">
-    <div class="perf-table-header">
-      <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;color:var(--text)">Recent Signals</span>
-      <div style="display:flex;gap:8px;">
-        <button class="perf-filter-btn active" onclick="filterSignals('all',this)">All</button>
-        <button class="perf-filter-btn" onclick="filterSignals('win',this)">Wins</button>
-        <button class="perf-filter-btn" onclick="filterSignals('loss',this)">Losses</button>
-      </div>
-    </div>
-    <div style="overflow-x:auto;">
-      <table class="perf-table" id="signalTable">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Pair</th>
-            <th>Type</th>
-            <th>Entry</th>
-            <th>SL</th>
-            <th>TP</th>
-            <th>Result</th>
-            <th>Pips</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody id="signalTableBody"></tbody>
-      </table>
-    </div>
-  </div>
-
-</section>
-
 <!-- PRICING -->
 <section id="pricing">
   <div class="section-header centered fade-up">
@@ -1975,70 +1621,6 @@
   </div>
 </section>
 
-<!-- COURSES -->
-<section id="courses">
-  <div class="section-header fade-up">
-    <div class="youtube-header">
-      <p class="section-eyebrow" style="margin:0">Our Educational Content</p>
-    </div>
-    <h2 class="section-title">Learn From Our Channel</h2>
-    <p class="section-sub">Stay updated with the latest market analysis and crypto trading courses.</p>
-  </div>
-  <div style="display:flex; align-items:center; gap:10px; margin-bottom:32px;" class="fade-up">
-    <span class="yt-badge">YouTube</span>
-    <span class="yt-handle">@AssetRanks</span>
-  </div>
-  <div class="videos-grid">
-    <a href="https://www.youtube.com/watch?v=uzPxeUrSjcY" target="_blank" rel="noopener" class="video-card fade-up">
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/uzPxeUrSjcY/maxresdefault.jpg" alt="Crypto Trading Fundamentals" loading="lazy" />
-        <div class="video-play">
-          <div class="video-play-btn">
-            <svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-info"><h4>Crypto Trading Fundamentals</h4></div>
-    </a>
-    <a href="https://www.youtube.com/watch?v=pNkUiY0mRjU" target="_blank" rel="noopener" class="video-card fade-up">
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/pNkUiY0mRjU/maxresdefault.jpg" alt="Risk Management Strategies" loading="lazy" />
-        <div class="video-play">
-          <div class="video-play-btn">
-            <svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-info"><h4>Risk Management Strategies</h4></div>
-    </a>
-    <a href="https://www.youtube.com/watch?v=b7H12qMqZlI" target="_blank" rel="noopener" class="video-card fade-up">
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/b7H12qMqZlI/maxresdefault.jpg" alt="Market Analysis Techniques" loading="lazy" />
-        <div class="video-play">
-          <div class="video-play-btn">
-            <svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-info"><h4>Market Analysis Techniques</h4></div>
-    </a>
-    <a href="https://www.youtube.com/watch?v=vo48UdtuaIM" target="_blank" rel="noopener" class="video-card fade-up">
-      <div class="video-thumb">
-        <img src="https://img.youtube.com/vi/vo48UdtuaIM/maxresdefault.jpg" alt="Advanced Trading Signals" loading="lazy" />
-        <div class="video-play">
-          <div class="video-play-btn">
-            <svg viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
-          </div>
-        </div>
-      </div>
-      <div class="video-info"><h4>Advanced Trading Signals</h4></div>
-    </a>
-  </div>
-  <div class="courses-cta fade-up">
-    <a href="#" class="btn-primary">Subscribe to Channel</a>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
@@ -2053,7 +1635,7 @@
         </div>
         <div>
           <div class="contact-item-label">Email</div>
-          <div class="contact-item-value">hello@assetranks.com</div>
+          <div class="contact-item-value">info.assetranks@gmail.com</div>
         </div>
       </div>
 
@@ -2063,7 +1645,7 @@
         </div>
         <div>
           <div class="contact-item-label">Phone</div>
-          <div class="contact-item-value">+1 (800) ASSETRNK</div>
+          <div class="contact-item-value">+92 317 0732137</div>
         </div>
       </div>
 
@@ -2073,7 +1655,7 @@
         </div>
         <div>
           <div class="contact-item-label">Website</div>
-          <div class="contact-item-value">assetranks.com</div>
+          <div class="contact-item-value">assetranks.vercel.app</div>
         </div>
       </div>
 
@@ -2106,7 +1688,7 @@
       </div>
       <div class="form-group">
         <label>Phone Number</label>
-        <input type="tel" placeholder="+1 234 567 8900" id="fphone" />
+        <input type="tel" placeholder="+92 317 0732137" id="fphone" />
       </div>
       <div class="form-group">
         <label>Service Interested In</label>
@@ -2247,7 +1829,6 @@
         <li><a href="#pricing">Pricing</a></li>
     <li><a href="#live-chart">Live Chart</a></li>
         <li><a href="#why-choose">Why Choose Us</a></li>
-        <li><a href="#courses">Courses</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -3069,98 +2650,6 @@ if (_aiSection) _aiObserver.observe(_aiSection);
 })();
 
 
-/* ══════════════════════════════════════════════
-   2. SIGNAL PERFORMANCE TABLE + CHART
-══════════════════════════════════════════════ */
-const SIGNALS = [
-  { date:'2025-05-22', pair:'XAU/USD', type:'BUY',  entry:'3312.40', sl:'3298.00', tp:'3348.00', result:'WIN',  pips:'+356' },
-  { date:'2025-05-21', pair:'XAU/USD', type:'SELL', entry:'3341.80', sl:'3358.00', tp:'3306.00', result:'WIN',  pips:'+358' },
-  { date:'2025-05-20', pair:'XAU/USD', type:'BUY',  entry:'3289.50', sl:'3275.00', tp:'3322.00', result:'WIN',  pips:'+325' },
-  { date:'2025-05-19', pair:'XAU/USD', type:'SELL', entry:'3318.20', sl:'3334.00', tp:'3285.00', result:'LOSS', pips:'-158' },
-  { date:'2025-05-17', pair:'XAU/USD', type:'BUY',  entry:'3268.00', sl:'3252.00', tp:'3302.00', result:'WIN',  pips:'+340' },
-  { date:'2025-05-16', pair:'XAU/USD', type:'BUY',  entry:'3244.60', sl:'3228.00', tp:'3280.00', result:'WIN',  pips:'+354' },
-  { date:'2025-05-15', pair:'XAU/USD', type:'SELL', entry:'3282.30', sl:'3298.00', tp:'3248.00', result:'WIN',  pips:'+343' },
-  { date:'2025-05-14', pair:'XAU/USD', type:'BUY',  entry:'3223.10', sl:'3208.00', tp:'3258.00', result:'LOSS', pips:'-150' },
-  { date:'2025-05-13', pair:'XAU/USD', type:'BUY',  entry:'3198.40', sl:'3182.00', tp:'3234.00', result:'WIN',  pips:'+356' },
-  { date:'2025-05-12', pair:'XAU/USD', type:'SELL', entry:'3241.00', sl:'3256.00', tp:'3206.00', result:'WIN',  pips:'+350' },
-  { date:'2025-05-10', pair:'XAU/USD', type:'BUY',  entry:'3176.80', sl:'3162.00', tp:'3212.00', result:'WIN',  pips:'+352' },
-  { date:'2025-05-09', pair:'XAU/USD', type:'SELL', entry:'3214.50', sl:'3230.00', tp:'3178.00', result:'LOSS', pips:'-155' },
-  { date:'2025-05-08', pair:'XAU/USD', type:'BUY',  entry:'3158.20', sl:'3143.00', tp:'3193.00', result:'WIN',  pips:'+348' },
-  { date:'2025-05-07', pair:'XAU/USD', type:'BUY',  entry:'3134.60', sl:'3119.00', tp:'3170.00', result:'WIN',  pips:'+354' },
-  { date:'2025-05-06', pair:'XAU/USD', type:'SELL', entry:'3172.80', sl:'3188.00', tp:'3136.00', result:'WIN',  pips:'+368' },
-];
-
-const MONTHLY = [
-  { month:'Jan', pips: 820, wins:8, losses:2 },
-  { month:'Feb', pips: 640, wins:6, losses:3 },
-  { month:'Mar', pips:1120, wins:10,losses:2 },
-  { month:'Apr', pips: 480, wins:5, losses:4 },
-  { month:'May', pips: 920, wins:9, losses:2 },
-];
-
-let currentFilter = 'all';
-
-function filterSignals(type, btn) {
-  currentFilter = type;
-  document.querySelectorAll('.perf-filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderTable();
-}
-
-function renderTable() {
-  const tbody = document.getElementById('signalTableBody');
-  if (!tbody) return;
-  const filtered = currentFilter === 'all' ? SIGNALS
-    : SIGNALS.filter(s => s.result.toLowerCase() === currentFilter);
-
-  tbody.innerHTML = filtered.map(s => {
-    const typeClass = s.type === 'BUY' ? 'sig-buy' : 'sig-sell';
-    const resClass  = s.result === 'WIN' ? 'sig-win' : s.result === 'LOSS' ? 'sig-loss' : 'sig-open';
-    const pipClass  = s.pips.startsWith('+') ? 'pip-pos' : 'pip-neg';
-    return `<tr>
-      <td>${s.date}</td>
-      <td class="pair-cell">${s.pair}</td>
-      <td><span class="sig-badge ${typeClass}">${s.type}</span></td>
-      <td>${s.entry}</td>
-      <td style="color:#ef4444">${s.sl}</td>
-      <td style="color:#22c55e">${s.tp}</td>
-      <td><span class="sig-badge ${resClass}">${s.result}</span></td>
-      <td class="${pipClass}">${s.pips}</td>
-      <td><span class="sig-badge ${resClass}">${s.result === 'WIN' ? 'Closed ✓' : s.result === 'LOSS' ? 'Closed ✗' : 'Open'}</span></td>
-    </tr>`;
-  }).join('');
-}
-
-function renderBars() {
-  const wrap   = document.getElementById('perfBars');
-  const labels = document.getElementById('perfLabels');
-  if (!wrap || !labels) return;
-
-  const max = Math.max(...MONTHLY.map(m => m.pips));
-
-  wrap.innerHTML = MONTHLY.map(m => {
-    const h = Math.round((m.pips / max) * 100);
-    return `<div class="perf-bar-wrap">
-      <div class="perf-bar" style="height:${h}%;background:linear-gradient(180deg,#22c55e,rgba(34,197,94,0.4));"
-        data-tip="${m.month}: +${m.pips} pips (${m.wins}W/${m.losses}L)"></div>
-    </div>`;
-  }).join('');
-
-  labels.innerHTML = MONTHLY.map(m =>
-    `<div class="perf-bar-label">${m.month}</div>`
-  ).join('');
-}
-
-// Init on DOM ready
-document.addEventListener('DOMContentLoaded', function() {
-  renderTable();
-  renderBars();
-});
-// Also init immediately if DOM already loaded
-if (document.readyState !== 'loading') {
-  renderTable();
-  renderBars();
-}
 
 
 /* ══════════════════════════════════════════════
