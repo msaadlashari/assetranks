@@ -938,7 +938,7 @@
 
   </style>
   <style>
-  .ad-slot {
+  .sponsor-strip {
     background: var(--black);
     padding: 28px 6vw;
     display: flex;
@@ -946,25 +946,34 @@
     align-items: center;
     gap: 8px;
   }
-  .ad-slot-label {
+  .sponsor-label {
     font-size: 0.65rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--text-dim);
   }
-  .ad-slot-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 32px;
-  }
-  .ad-slot a { display: block; line-height: 0; }
-  .ad-slot img {
+  .sponsor-strip a, .sponsor-rail a { display: block; line-height: 0; }
+  .sponsor-strip img, .sponsor-rail img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
     border: 0.5px solid var(--border);
+  }
+
+  .sponsor-rail { display: none; }
+
+  @media (min-width: 1200px) and (min-height: 700px) {
+    body { padding-left: 150px; }
+    .sponsor-rail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      position: fixed;
+      left: 15px;
+      top: 84px;
+      z-index: 50;
+    }
   }
 </style>
 </head>
@@ -1041,14 +1050,11 @@
     </div>
   </div>
 </section>
-<!-- AD SLOT: after hero -->
-<div class="ad-slot">
-  <span class="ad-slot-label">Advertisement</span>
-  <div class="ad-slot-row">
-    <a href="https://clicks.pipaffiliates.com/c?m=158596&amp;c=1238195" referrerpolicy="no-referrer-when-downgrade"><img src="https://ads.pipaffiliates.com/i/158596?c=1238195" width="320" height="100" referrerpolicy="no-referrer-when-downgrade"/></a>
-  </div>
+<!-- SPONSOR STRIP: after hero -->
+<div class="sponsor-strip">
+  <span class="sponsor-label">Sponsored</span>
+  <a href="https://clicks.pipaffiliates.com/c?m=158596&amp;c=1238195" referrerpolicy="no-referrer-when-downgrade"><img src="https://ads.pipaffiliates.com/i/158596?c=1238195" width="320" height="100" referrerpolicy="no-referrer-when-downgrade"/></a>
 </div>
-
 <!-- SERVICES -->
 <section id="services">
   <div class="section-header fade-up">
@@ -1598,13 +1604,10 @@
 <!-- LIVE XAUUSD CHART -->
 
 
-<!-- AD SLOT: before pricing -->
-<div class="ad-slot">
-  <span class="ad-slot-label">Advertisement</span>
-  <div class="ad-slot-row">
-    <a href="https://clicks.pipaffiliates.com/c?m=158594&amp;c=1238195" referrerpolicy="no-referrer-when-downgrade"><img src="https://ads.pipaffiliates.com/i/158594?c=1238195" width="120" height="600" referrerpolicy="no-referrer-when-downgrade"/></a>
-    <a href="https://clicks.pipaffiliates.com/c?m=158595&amp;c=1238195" referrerpolicy="no-referrer-when-downgrade"><img src="https://ads.pipaffiliates.com/i/158595?c=1238195" width="300" height="250" referrerpolicy="no-referrer-when-downgrade"/></a>
-  </div>
+<!-- SPONSOR STRIP: before pricing -->
+<div class="sponsor-strip">
+  <span class="sponsor-label">Sponsored</span>
+  <a href="https://clicks.pipaffiliates.com/c?m=158595&amp;c=1238195" referrerpolicy="no-referrer-when-downgrade"><img src="https://ads.pipaffiliates.com/i/158595?c=1238195" width="300" height="250" referrerpolicy="no-referrer-when-downgrade"/></a>
 </div>
 <!-- PRICING -->
 <section id="pricing">
@@ -2487,7 +2490,11 @@ var _aiSection = document.getElementById('live-chart');
 if (_aiSection) _aiObserver.observe(_aiSection);
 </script>
 
-
+<!-- SPONSOR SIDE RAIL -->
+<div class="sponsor-rail">
+  <span class="sponsor-label">Sponsored</span>
+  <a href="https://clicks.pipaffiliates.com/c?m=158594&amp;c=1238195" referrerpolicy="no-referrer-when-downgrade"><img src="https://ads.pipaffiliates.com/i/158594?c=1238195" width="120" height="600" referrerpolicy="no-referrer-when-downgrade"/></a>
+</div>
 <!-- WHATSAPP FLOATING WIDGET -->
 <div id="waWidget" style="
   position:fixed; bottom:28px; right:28px; z-index:9999;
